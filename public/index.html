@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Task Automator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Task Automator</h1>
+        <p>Describe any task and let AI handle it</p>
+        
+        <div class="task-input">
+            <textarea id="taskInput" placeholder="What do you want the AI to do? (e.g., 'Write a poem about robots', 'Solve 2x + 5 = 15', 'Analyze this data')"></textarea>
+            <button id="executeBtn">Execute Task</button>
+        </div>
+        
+        <div class="result-container">
+            <h2>Task Results</h2>
+            <div id="taskResult" class="result-box"></div>
+        </div>
+        
+        <div class="task-history">
+            <h2>Task History</h2>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

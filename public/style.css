@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f7fa;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4a6bdf;
+    text-align: center;
+}
+
+.task-input {
+    margin: 30px 0;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4a6bdf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3a5bd9;
+}
+
+.result-container {
+    margin: 30px 0;
+}
+
+.result-box {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 100px;
+}
+
+.task-history {
+    margin-top: 30px;
+}
+
+.task-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-history li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.task-history li:hover {
+    background-color: #f5f7fa;
+}
+
+.loading {
+    color: #666;
+    font-style: italic;
+}
