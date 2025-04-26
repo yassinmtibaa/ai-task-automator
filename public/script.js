@@ -22,9 +22,11 @@ executeBtn.addEventListener('click', async () => {
             },
             body: JSON.stringify({ task })
         });
-        
-        const data = await response.json();
-        
+        const rawResponse = await response.text();
+        console.log("Raw response:", rawResponse);
+        const data = JSON.parse(rawResponse);
+
+
         if (data.success) {
             taskResult.innerHTML = `<p>${data.result.replace(/\n/g, '<br>')}</p>`;
             
@@ -44,8 +46,9 @@ executeBtn.addEventListener('click', async () => {
             taskResult.innerHTML = `<p class="error">Error: ${data.error}</p>`;
         }
     } catch (error) {
-        taskResult.innerHTML = `<p class="error">Failed to connect to server: ${error.message}</p>`;
-    }
+        console.error("Full error:", error);
+        taskResult.innerHTML = `<p class="error">Error: ${error.message}<br>Server response: ${rawResponse || 'none'}</p>`;
+      }
 });
 
 function renderHistory() {
